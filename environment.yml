@@ -1,0 +1,14 @@
+name: shelter-analytics
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11  # Or your preferred python version
+  - pip
+  - flask
+  - pandas
+  - sqlalchemy
+  - pip:
+    - gunicorn
+    - psycopg2-binary
+    - werkzeug
