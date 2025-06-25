@@ -18,7 +18,7 @@ def get_engine():
         db_url = f"sqlite:///{os.path.join(basedir, 'users.db')}"
     return sqlalchemy.create_engine(db_url)
 
-# --- User Authentication Routes (Updated for SQLAlchemy) ---
+# --- User Authentication Routes ---
 @app.route('/')
 def index():
     return render_template('index07.html')
@@ -26,6 +26,7 @@ def index():
 @app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
+        # ... (form validation logic is the same) ...
         first_name, last_name, email, password, confirm_password = request.form['first_name'], request.form['last_name'], request.form['email'], request.form['password'], request.form['confirm_password']
         if password != confirm_password:
             flash('Passwords do not match', 'danger')
@@ -36,15 +37,19 @@ def sign_up():
         hashed_password = generate_password_hash(password)
         
         engine = get_engine()
-        with engine.connect() as conn:
-            try:
+        try:
+            with engine.connect() as conn:
                 query = text("INSERT INTO users (first_name, last_name, email, password) VALUES (:fn, :ln, :email, :pwd)")
                 conn.execute(query, {"fn": first_name, "ln": last_name, "email": email, "pwd": hashed_password})
-                conn.commit() 
-            except Exception as e:
-                flash('Email already registered', 'danger')
-                return redirect(url_for('sign_up'))
-        return redirect(url_for('thank_you'))
+                conn.commit()
+        except Exception as e:
+            flash('Email already registered or another error occurred.', 'danger')
+            return redirect(url_for('sign_up'))
+        
+        # send the user to sign in.
+        flash('Sign up successful! Please sign in.', 'success')
+        return redirect(url_for('sign_in'))
+        
     return render_template('sign_up07.html')
 
 @app.route('/sign_in', methods=['GET', 'POST'])
@@ -63,19 +68,19 @@ def sign_in():
             flash('Invalid credentials', 'danger')
     return render_template('sign_in07.html')
 
-@app.route('/thank_you')
-def thank_you(): return render_template('thank_you07.html')
+
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
     flash('You have been successfully logged out.', 'success')
     return redirect(url_for('sign_in'))
+
 @app.route('/dashboard')
 def dashboard():
     if 'user_id' not in session: return redirect(url_for('sign_in'))
     return render_template('dashboard.html')
 
-# --- API Routes for Charts ---
+# --- All API Routes for Charts and Chatbot ---
 @app.route('/api/outcome-summary')
 def outcome_summary():
     if 'user_id' not in session: return jsonify({"error": "Unauthorized"}), 401
@@ -101,7 +106,7 @@ def adoptions_by_year():
     with engine.connect() as conn:
         query = text('SELECT "OutcomeYear" as year, COUNT(*) as count FROM animal_data WHERE "Outcome Type" = \'Adoption\' AND "OutcomeYear" IS NOT NULL GROUP BY year ORDER BY year')
         results = conn.execute(query).mappings().all()
-    labels = [row['year'] for row in results]
+    labels = [str(row['year']) for row in results]
     data = [row['count'] for row in results]
     max_val = 0
     if data: max_val = math.ceil((max(data) + 1000) / 1000) * 1000
@@ -125,7 +130,6 @@ def age_demographics():
         results = conn.execute(query).mappings().all()
     return jsonify({"labels": [row['AgeCategory'] for row in results], "data": [row['count'] for row in results]})
 
-# --- Chatbot API Route ---
 @app.route('/api/chat', methods=['POST'])
 def chat():
     if 'user_id' not in session: return jsonify({"error": "Unauthorized"}), 401
@@ -157,6 +161,7 @@ def chat():
             where_clauses.append('"OutcomeYear" = :year')
             params["year"] = year_match.group(1)
             description_parts.append(f"in {year_match.group(1)}")
+        
         response_text = "I'm sorry, I couldn't understand that."
         if where_clauses:
             query_filter_string = " AND ".join(where_clauses)
