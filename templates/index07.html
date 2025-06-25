@@ -1,0 +1,117 @@
+{% extends "base07.html" %}
+
+{% block title %}Welcome to Shelter Analytics{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        background-color: #f8f9fa; /* A light grey background */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1548681528-6a5c45b66b42?q=80&w=2070') no-repeat center center;
+        background-size: cover;
+    }
+    .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero-section p {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+    }
+
+    /* Features Section */
+    .features-section {
+        padding: 60px 0;
+    }
+    .feature-card {
+        background: white;
+        border: none;
+        border-radius: 10px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    .feature-icon {
+        font-size: 3rem;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid p-0">
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>Find Your New Best Friend</h1>
+            <p>Explore interactive data from the Austin Animal Center and ask our AI assistant anything about available pets.</p>
+            <a href="{{ url_for('sign_up') }}" class="btn btn-primary btn-lg">Get Started for Free</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Use Our Dashboard?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-pie feature-icon"></i>
+                        <h5>Interactive Analytics</h5>
+                        <p>Visualize shelter trends with dynamic charts for adoptions, animal types, demographics, and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-robot feature-icon"></i>
+                        <h5>AI-Powered Assistant</h5>
+                        <p>Ask our chatbot complex questions in plain English and get instant answers about any animal in the database.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-database feature-icon"></i>
+                        <h5>Data-Driven Insights</h5>
+                        <p>Go beyond simple tables. Understand the stories hidden in the data to help make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-auto">
+    <div class="container">
+        <p>© 2025 Austin Shelter Analytics. All Rights Reserved.</p>
+    </div>
+</footer>
+
+{% endblock %}

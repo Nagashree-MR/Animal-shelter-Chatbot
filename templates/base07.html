@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Web App{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- *** ADD THIS LINE FOR THE ICONS *** -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    {% block head %}{% endblock %}
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- The empty div below helps push the buttons to the right -->
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <!-- 'ml-auto' pushes the content to the far right -->
+            <div class="navbar-nav ml-auto">
+                <!-- Styled Sign In and Sign Up Button -->
+                <a class="btn btn-outline-primary mr-2" href="{{ url_for('sign_in') }}">Sign In</a>
+                <a class="btn btn-outline-primary mr-2" href="{{ url_for('sign_up') }}">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+        <!-- This is for showing flashed messages like "Login successful" -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }} mt-3">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
