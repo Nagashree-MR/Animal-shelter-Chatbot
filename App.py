@@ -18,7 +18,7 @@ def get_engine():
         db_url = f"sqlite:///{os.path.join(basedir, 'users.db')}"
     return sqlalchemy.create_engine(db_url)
 
-# --- User Authentication Routes (already SQLAlchemy compliant) ---
+# --- User Authentication Routes ---
 @app.route('/')
 def index(): return render_template('index07.html')
 
@@ -67,7 +67,6 @@ def dashboard():
     if 'user_id' not in session: return redirect(url_for('sign_in'))
     return render_template('dashboard.html')
 
-# --- API Routes - All queries are now explicitly case-sensitive using quotes ---
 @app.route('/api/outcome-summary')
 def outcome_summary():
     if 'user_id' not in session: return jsonify({"error": "Unauthorized"}), 401
@@ -93,7 +92,7 @@ def adoptions_by_year():
     with engine.connect() as conn:
         query = text('SELECT "OutcomeYear" as year, COUNT(*) as count FROM animal_data WHERE "Outcome Type" = \'Adoption\' AND "OutcomeYear" IS NOT NULL GROUP BY "OutcomeYear" ORDER BY "OutcomeYear"')
         results = conn.execute(query).mappings().all()
-    labels = [str(row['year']) for row in results]
+    labels = [str(int(row['year'])) for row in results]
     data = [row['count'] for row in results]
     max_val = 0
     if data: max_val = math.ceil((max(data) + 1000) / 1000) * 1000
