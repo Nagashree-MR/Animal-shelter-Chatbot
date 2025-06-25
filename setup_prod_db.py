@@ -1,4 +1,4 @@
-# setup_prod_db.py (Final Version with Chunking for Low Memory)
+# setup_prod_db.py 
 import os
 import pandas as pd
 import sqlalchemy
