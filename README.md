@@ -31,8 +31,8 @@ Here's a look at the main analytics dashboard, which features a compact, multi-c
 
 <table>
   <tr>
-    <td align="center" width="50%"><strong>Engaging Landing Page</strong></td>
-    <td align="center" width="50%"><strong>AI-Powered Chatbot Examples</strong></td>
+    <td align="center" width="150%"><strong>Engaging Landing Page</strong></td>
+    <td align="center"><strong>AI-Powered Chatbot Examples</strong></td>
   </tr>
   <tr>
     <td><img src="Screenshots/landing-page.png" alt="Landing Page" width="100%"></td>
