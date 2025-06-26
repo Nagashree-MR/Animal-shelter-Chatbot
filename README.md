@@ -37,11 +37,11 @@ A Flask-based web application for analyzing data from the Austin Animal Center, 
     <td align="center"><strong>AI-Powered Chatbot Examples</strong></td>
   </tr>
   <tr>
-    <td><img src="assets/landing-page.png" alt="Landing Page" width="100%"></td>
+    <td><img src="Screenshots/landing-page.png" alt="Landing Page" width="100%"></td>
     <td>
-      <img src="assets/Chat1.png" alt="Chatbot Demo 1" width="100%">
+      <img src="Screenshots/Chat1.png" alt="Chatbot Demo 1" width="100%">
       <br> <!-- Adds a small space between the images -->
-      <img src="assets/Chat2.png" alt="Chatbot Demo 2" width="100%">
+      <img src="Screenshots/Chat2.png" alt="Chatbot Demo 2" width="100%">
     </td>
   </tr>
   <tr>
@@ -49,8 +49,8 @@ A Flask-based web application for analyzing data from the Austin Animal Center, 
     <td align="center"><strong>Clean Sign-Up Form</strong></td>
   </tr>
     <tr>
-    <td><img src="assets/signin-page.png" alt="Sign In Page" width="100%"></td>
-    <td><img src="assets/signup-page.png" alt="Sign Up Page" width="100%"></td>
+    <td><img src="Screenshots/SignIn.png" alt="Sign In Page" width="100%"></td>
+    <td><img src="Screenshots/SignUp.png" alt="Sign Up Page" width="100%"></td>
   </tr>
 </table>
 
