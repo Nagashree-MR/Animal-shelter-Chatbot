@@ -12,6 +12,8 @@ A Flask-based web application for analyzing data from the Austin Animal Center, 
 
 ## Showcase
 
+Here's a look at the main analytics dashboard, which features a compact, multi-column layout with five dynamic charts.
+
 ![Main Dashboard View](Screenshots/Dashboard.png)
 
 ---
@@ -19,40 +21,34 @@ A Flask-based web application for analyzing data from the Austin Animal Center, 
 ## Key Features
 
 *   **Secure User Authentication:** Modern, aesthetic, and secure sign-up and sign-in flows.
-*   **Interactive Data Dashboard:** Visualizes key metrics with several dynamic charts:
-    *   Adoptions by Year
-    *   Sterilization Status
-    *   Top 5 Animal Types & Age Demographics
-    *   Overall Outcomes by Type
+*   **Interactive Data Dashboard:** Visualizes key metrics with several dynamic charts including trends, distributions, and statuses.
 *   **Natural Language Chatbot:** A floating widget that understands complex, combined questions (e.g., *"how many adult dogs were adopted in 2018?"*).
 *   **Optimized & Deployable:** Built with a production-ready structure using a cloud database (PostgreSQL) and optimized with database indexes for fast query performance.
 
 ---
 
-## Screenshots
+## More Screenshots
 
 <table>
   <tr>
-    <td align="center"><strong>Engaging Landing Page</strong></td>
-    <td align="center"><strong>AI-Powered Chatbot Examples</strong></td>
+    <td align="center" width="50%"><strong>Engaging Landing Page</strong></td>
+    <td align="center" width="50%"><strong>AI-Powered Chatbot Examples</strong></td>
   </tr>
   <tr>
-    <td><img src="Screenshots/landing-page.png" alt="Landing Page" width="150%"></td>
+    <td><img src="Screenshots/landing-page.png" alt="Landing Page" width="100%"></td>
     <td>
       <img src="Screenshots/Chat1.png" alt="Chatbot Demo 1" width="100%">
       <br> 
       <img src="Screenshots/Chat2.png" alt="Chatbot Demo 2" width="100%">
     </td>
   </tr>
-  <!-- Third Row: Headers -->
   <tr>
     <td align="center"><strong>Modern Sign-In Form</strong></td>
     <td align="center"><strong>Clean Sign-Up Form</strong></td>
   </tr>
-  <!-- Fourth Row: Images -->
-  <tr>
+    <tr>
     <td><img src="Screenshots/SignIn.png" alt="Sign In Page" width="100%"></td>
-    <td><img src="Screenshots/Signup.png" alt="Sign Up Page" width="100%"></td>
+    <td><img src="Screenshots/SignUp.png" alt="Sign Up Page" width="100%"></td>
   </tr>
 </table>
 
