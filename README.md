@@ -37,17 +37,16 @@ A Flask-based web application for analyzing data from the Austin Animal Center, 
     <td align="center"><strong>AI-Powered Chatbot</strong></td>
   </tr>
   <tr>
-    <td><img src="Screenshots/landing-page.png" alt="Landing Page"></td>
-    <td><img src="Screenshots/Chat1.png" alt="Chatbot Demo"></td>
-<td><img src="Screenshots/Chat2.png" alt="Chatbot Demo"></td>
+    <td><img src="Screenshots/landing-page.png" alt="Landing Page" width="100%"></td>
+    <td><img src="Screenshots/Chat1.png" alt="Chatbot Demo" width="100%"></td>
   </tr>
   <tr>
-    <td align="center"><strong>Modern SignIn Form</strong></td>
-    <td align="center"><strong>Clean SignUp Form</strong></td>
+    <td align="center"><strong>Modern Sign-In Form</strong></td>
+    <td align="center"><strong>Clean Sign-Up Form</strong></td>
   </tr>
     <tr>
-    <td><img src="Screenshots/SignIn.png" alt="Sign In Page"></td>
-    <td><img src="Screenshots/SignUp.png" alt="Sign Up Page"></td>
+    <td><img src="Screenshots/SignIn.png" alt="Sign In Page" width="100%"></td>
+    <td><img src="Screenshots/SignUp.png" alt="Sign Up Page" width="100%"></td>
   </tr>
 </table>
 
