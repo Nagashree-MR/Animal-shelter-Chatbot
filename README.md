@@ -50,7 +50,7 @@ A Flask-based web application for analyzing data from the Austin Animal Center, 
   </tr>
     <tr>
     <td><img src="Screenshots/SignIn.png" alt="Sign-In Page" width="100%"></td>
-    <td><img src="Screenshots/SignUp.png" alt="Sign-Up Page" width="100%"></td>
+    <td><img src="Screenshots/Signup.png" alt="Sign-Up Page" width="100%"></td>
   </tr>
 </table>
 
