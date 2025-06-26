@@ -38,16 +38,16 @@ A Flask-based web application for analyzing data from the Austin Animal Center, 
   </tr>
   <tr>
     <td><img src="Screenshots/landing-page.png" alt="Landing Page"></td>
-    <td><img src="Screenshots/chat1.png" alt="Chatbot Demo"></td>
-<td><img src="Screenshots/chat2.png" alt="Chatbot Demo"></td>
+    <td><img src="Screenshots/Chat1.png" alt="Chatbot Demo"></td>
+<td><img src="Screenshots/Chat2.png" alt="Chatbot Demo"></td>
   </tr>
   <tr>
     <td align="center"><strong>Modern SignIn Form</strong></td>
     <td align="center"><strong>Clean SignUp Form</strong></td>
   </tr>
     <tr>
-    <td><img src="Screenshots/signIn.png" alt="Sign In Page"></td>
-    <td><img src="Screenshots/signUp.png" alt="Sign Up Page"></td>
+    <td><img src="Screenshots/SignIn.png" alt="Sign In Page"></td>
+    <td><img src="Screenshots/SignUp.png" alt="Sign Up Page"></td>
   </tr>
 </table>
 
