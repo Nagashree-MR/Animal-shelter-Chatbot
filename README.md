@@ -17,7 +17,12 @@ Here's a look at the main analytics dashboard, which features a compact, multi-c
 ![Main Dashboard View](Screenshots/Dashboard.png)
 
 ---
+Here's how the landing page looks like!
 
+![Landing Page](Screenshots/Landing-page1.png)
+![Landing Page](Screenshots/Landing-page2.png)
+
+---
 ## Key Features
 
 *   **Secure User Authentication:** Modern, aesthetic, and secure sign-up and sign-in flows.
@@ -31,24 +36,19 @@ Here's a look at the main analytics dashboard, which features a compact, multi-c
 
 <table>
   <tr>
-    <td align="center" width="150%"><strong>Engaging Landing Page</strong></td>
-    <td align="center"><strong>AI-Powered Chatbot Examples</strong></td>
+    <td align="left"><strong>AI-Powered Chatbot Examples</strong></td>
   </tr>
   <tr>
-    <td><img src="Screenshots/landing-page.png" alt="Landing Page" width="100%"></td>
-    <td>
-      <img src="Screenshots/Chat1.png" alt="Chatbot Demo 1" width="100%">
-      <br> 
-      <img src="Screenshots/Chat2.png" alt="Chatbot Demo 2" width="100%">
-    </td>
+    <td><img src="Screenshots/Chat1.png" alt="Chatbot Demo 1" width="46%"></td>
+    <td><img src="Screenshots/Chat2.png" alt="Chatbot Demo 2" width="50%"></td>
   </tr>
   <tr>
-    <td align="center"><strong>Modern Sign-In Form</strong></td>
-    <td align="center"><strong>Clean Sign-Up Form</strong></td>
+    <td align="left"><strong>Sign-Up Form</strong></td>
+    <td align="left"><strong>Sign-In Form</strong></td>
   </tr>
     <tr>
-    <td><img src="Screenshots/SignIn.png" alt="Sign In Page" width="100%"></td>
-    <td><img src="Screenshots/SignUp.png" alt="Sign Up Page" width="100%"></td>
+    <td><img src="Screenshots/CreateAcct.png" alt="Sign In Page" width="40%"></td>
+    <td><img src="Screenshots/Login.png" alt="Sign Up Page" width="50%"></td>
   </tr>
 </table>
 
