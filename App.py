@@ -168,5 +168,11 @@ def chat():
                     response_text = f"Sorry, I couldn't find any {description}."
     return jsonify({'response': response_text})
 
+# --- Continuous Uptime  ---
+@app.route('/health')
+def health_check():
+    """A lightweight endpoint for uptime monitoring services."""
+    return jsonify({"status": "ok"}), 200
+
 if __name__ == '__main__':
     app.run(debug=True)
